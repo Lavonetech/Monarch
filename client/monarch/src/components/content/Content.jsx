@@ -51,7 +51,7 @@ const Content = () => {
                 name={subPart.name}
                 id={subPart._id}
                 key={subPart._id}
-                image={subPart.thumbnail}
+                image={subPart.bigImg}
               />
             ))}
           </div>

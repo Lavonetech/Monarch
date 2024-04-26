@@ -1,7 +1,7 @@
 import React from "react";
 import SideBar from "../components/side-bar/SideBar";
-import { Outlet } from "react-router-dom";
-import './main-container.scss';
+import Content from "../components/content/Content";
+import "./main-container.scss";
 
 const MainContainer = () => {
   return (
@@ -11,7 +11,7 @@ const MainContainer = () => {
       </div>
 
       <div className="outlet">
-        <Outlet />
+        <Content />
       </div>
     </div>
   );

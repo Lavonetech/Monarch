@@ -6,8 +6,8 @@
 
   .logo {
     position: absolute;
-    left: 5%;
-    top: 25px;
+    left: 7%;
+    top: 50px;
     z-index: 1;
 
     img {
@@ -18,7 +18,7 @@
   .choice-box {
     width: fit-content;
     min-width: 280px;
-    min-height: 100px;
+    // min-height: 100px;
     background-color: #fff;
     position: absolute;
     left: 5%;
@@ -77,6 +77,9 @@
         cursor: pointer;
 
         .item-icon {
+          img {
+            max-width: 120px;
+          }
         }
 
         .item-name {
@@ -126,7 +129,7 @@
         rgba(255, 255, 255, 1) 0%,
         rgba(187, 187, 187, 1) 79%
       );
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#bbbbbb",GradientType=1);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#bbbbbb",GradientType=1);
       z-index: 0;
     }
 

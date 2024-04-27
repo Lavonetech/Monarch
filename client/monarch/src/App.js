@@ -49,8 +49,10 @@ function App() {
         </div>
 
         {/* Left */}
-        <div className="md:w-1/6 space-y-7 px-4 py-6 bg-black flex flex-col items-center overflow-y-auto max-h-screen ">
-        <div className="">
+        <div className="md:w-1/6 space-y-7 px-4 py-6 bg-black flex flex-col items-center overflow-y-auto max-h-screen "
+        style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}
+        >
+          <div className="">
             <button className="btn bg-white px-8 py-3 border-black text-xs font-semibold flex items-center rounded">
               Product Name
             </button>
@@ -62,9 +64,7 @@ function App() {
             </button>
           </div>
           <div className="">
-            <button
-              className="btn px-8 py-3 border border-white items-center rounded"
-            >
+            <button className="btn px-8 py-3 border border-white items-center rounded">
               <img className="w-20 h-20" src={item2} alt="" />
               <span className="text-xs text-white">Sleeve</span>
             </button>

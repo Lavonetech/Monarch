@@ -2,7 +2,7 @@ import React from 'react';
 import item2 from "../assets/items/item8.png";
 import item5 from "../assets/items/item9.png";
 
-function Card({ isOpen, toggleCard }) {
+function Card({ isOpen, toggleCard, onShortClick, onLongClick }) {
   return (
     <div className={`card py-7 px-7 w-49 ${isOpen ? 'block' : 'hidden'}`}>
       <div className="card-body bg-white border border-black">
@@ -20,11 +20,11 @@ function Card({ isOpen, toggleCard }) {
         </div>
         
         <div className='flex flex-col '>
-            <button className='flex flex-row items-center hover:bg-[#E2EFFF] focus:bg-[#E2EFFF]'>
+        <button className='flex flex-row items-center hover:bg-[#E2EFFF] focus:bg-[#E2EFFF]'  onClick={onShortClick}>
                 <img className=" w-16" src={item5} alt="" />
                 <p className=' py-6 px-10 flex flex-row items-center' >Short Sleeve</p>
             </button>
-            <button className='flex flex-row items-center hover:bg-[#E2EFFF] focus:bg-[#E2EFFF]'>
+            <button className='flex flex-row items-center hover:bg-[#E2EFFF] focus:bg-[#E2EFFF]' onClick={onLongClick}>
             <img className=" w-16" src={item2} alt="" />
                 <p className=' py-6 px-10 flex flex-row items-center'>Long Sleeve</p>
             </button>

@@ -1,6 +1,7 @@
 import "./App.css";
 import logo from "./assets/logo.png";
 import img1 from "./assets/img1.png";
+import img2 from "./assets/img2.png";
 import item1 from "./assets/items/item1.png";
 import item2 from "./assets/items/item2.svg";
 import item3 from "./assets/items/item3.png";
@@ -13,11 +14,20 @@ import Card from "./components/Card";
 
 function App() {
   const [showCard, setShowCard] = useState(false);
+  const [showImg2, setShowImg2] = useState(false);
 
   const toggleCard = () => {
     setShowCard(!showCard);
   };
 
+  const handleShortSleeveClick = () => {
+    setShowImg2(true);
+  };
+
+  const handleLongSleeveClick = () => {
+    setShowImg2(false);
+  };
+  
   return (
     <div className="section-container">
       <div className="flex flex-col md:flex-row-reverse justify-between">
@@ -25,7 +35,12 @@ function App() {
         <div className="md:w-5/6 h-screen bg-gradient-to-r from-[#BBBBBB] via-white to-[#BBBBBB]">
           <div className="flex flex-col md:flex-row justify-between">
             {showCard ? (
-              <Card isOpen={showCard} toggleCard={toggleCard} />
+              <Card
+                isOpen={showCard}
+                toggleCard={toggleCard}
+                onShortClick={handleShortSleeveClick}
+                onLongClick={handleLongSleeveClick}
+              />
             ) : (
               <div className="max-w-sm py-7 px-7 mx-auto">
                 <img className="w-24 md:w-auto" src={logo} alt="" />
@@ -34,7 +49,11 @@ function App() {
 
             {/*Main Image */}
             <div className="flex flex-1 justify-center ">
-              <img className="md:max-w-md mx-auto" src={img1} alt="" />
+              <img
+                className="md:max-w-md mx-auto"
+                src={showImg2 ? img2 : img1}
+                alt=""
+              />
             </div>
 
             {/*Main Text */}

@@ -8,29 +8,38 @@ import item4 from "./assets/items/item4.png";
 import item5 from "./assets/items/item5.png";
 import item6 from "./assets/items/item6.png";
 import { VscDebugRestart } from "react-icons/vsc";
+import React, { useState } from "react";
+import Card from "./components/Card";
 
 function App() {
+  const [showCard, setShowCard] = useState(false);
+
+  const toggleCard = () => {
+    setShowCard(!showCard);
+  };
+
   return (
     <div className="section-container">
       <div className="flex flex-col md:flex-row-reverse justify-between">
         {/* Right */}
         <div className="md:w-5/6 h-screen bg-gradient-to-r from-[#BBBBBB] via-white to-[#BBBBBB]">
           <div className="flex flex-col md:flex-row justify-between">
-            {/*Logo */}
-            <div className="max-w-sm py-7 px-7 mx-auto">
-              <img className="w-24 md:w-auto" src={logo} alt="" />
-            </div>
+            {showCard ? (
+              <Card isOpen={showCard} toggleCard={toggleCard} />
+            ) : (
+              <div className="max-w-sm py-7 px-7 mx-auto">
+                <img className="w-24 md:w-auto" src={logo} alt="" />
+              </div>
+            )}
 
-            {/*Main Images */}
+            {/*Main Image */}
             <div className="flex flex-1 justify-center ">
               <img className="md:max-w-md mx-auto" src={img1} alt="" />
             </div>
 
             {/*Main Text */}
             <div className="py-20 px-20 flex flex-col items-end">
-              <div className="py-2">
-                <h1 className="text-5xl font-bold">$110</h1>
-              </div>
+              <h1 className="text-5xl font-bold">$110</h1>
               <div className=" py-2">
                 <button className="btn bg-black px-8 py-3 font-semibold text-white uppercase ">
                   continue
@@ -49,8 +58,9 @@ function App() {
         </div>
 
         {/* Left */}
-        <div className="md:w-1/6 space-y-7 px-4 py-6 bg-black flex flex-col items-center overflow-y-auto max-h-screen "
-        style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}
+        <div
+          className="md:w-1/6 space-y-7 px-4 py-6 bg-black flex flex-col items-center overflow-y-auto max-h-screen "
+          style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}
         >
           <div className="">
             <button className="btn bg-white px-8 py-3 border-black text-xs font-semibold flex items-center rounded">
@@ -59,49 +69,52 @@ function App() {
           </div>
           <div className="">
             <button className="btn px-8 py-3 border border-white items-center rounded">
-              <img className="w-20 h-20" src={item1} alt="" />
+              <img className="w-20 h-20" src={item1} alt="" />{" "}
               <span className="text-xs text-white">Fabric</span>
             </button>
           </div>
           <div className="">
-            <button className="btn px-8 py-3 border border-white items-center rounded">
-              <img className="w-20 h-20" src={item2} alt="" />
+            <button
+              className="btn px-8 py-3 border border-white items-center rounded"
+              onClick={toggleCard}
+            >
+              <img className="w-20 h-20" src={item2} alt="" />{" "}
               <span className="text-xs text-white">Sleeve</span>
             </button>
           </div>
           <div className="">
             <button className="btn px-8 py-3 border border-white items-center rounded">
-              <img className="w-20 h-20" src={item3} alt="" />
-              <span className="text-xs text-white">Color</span>
+              <img className="w-20 h-20" src={item3} alt="" />{" "}
+              <span className="text-xs text-white">Collar</span>
             </button>
           </div>
           <div className="">
             <button className="btn px-8 py-3 border border-white items-center rounded">
-              <img className="w-20 h-20" src={item4} alt="" />
+              <img className="w-20 h-20" src={item4} alt="" />{" "}
               <span className="text-xs text-white">Cuff</span>
             </button>
           </div>
           <div className="">
             <button className="btn px-8 py-3 border border-white items-center rounded">
-              <img className="w-20 h-20" src={item5} alt="" />
+              <img className="w-20 h-20" src={item5} alt="" />{" "}
               <span className="text-xs text-white">Placket</span>
             </button>
           </div>
           <div className="">
             <button className="btn px-8 py-3 border border-white items-center rounded">
-              <img className="w-20 h-20" src={item6} alt="" />
+              <img className="w-20 h-20" src={item6} alt="" />{" "}
               <span className="text-xs text-white">Pocket</span>
             </button>
           </div>
           <div className="">
             <button className="btn px-8 py-3 border border-white items-center rounded">
-              <img className="w-20 h-20" src={item1} alt="" />
+              <img className="w-20 h-20" src={item1} alt="" />{" "}
               <span className="text-xs text-white">Color</span>
             </button>
           </div>
           <div className="">
             <button className="btn px-8 py-3 border border-white items-center rounded">
-              <img className="w-20 h-20" src={item2} alt="" />
+              <img className="w-20 h-20" src={item2} alt="" />{" "}
               <span className="text-xs text-white">Fabric</span>
             </button>
           </div>

@@ -1,6 +1,12 @@
 import "./App.css";
 import logo from "./assets/logo.png";
 import img1 from "./assets/img1.png";
+import item1 from "./assets/items/item1.png";
+import item2 from "./assets/items/item2.svg";
+import item3 from "./assets/items/item3.png";
+import item4 from "./assets/items/item4.png";
+import item5 from "./assets/items/item5.png";
+import item6 from "./assets/items/item6.png";
 import { VscDebugRestart } from "react-icons/vsc";
 
 function App() {
@@ -43,7 +49,63 @@ function App() {
         </div>
 
         {/* Left */}
-        <div className="md:w-1/6 space-y-7 px-4 py-6 bg-black flex flex-col items-center overflow-y-auto max-h-screen "></div>
+        <div className="md:w-1/6 space-y-7 px-4 py-6 bg-black flex flex-col items-center overflow-y-auto max-h-screen ">
+        <div className="">
+            <button className="btn bg-white px-8 py-3 border-black text-xs font-semibold flex items-center rounded">
+              Product Name
+            </button>
+          </div>
+          <div className="">
+            <button className="btn px-8 py-3 border border-white items-center rounded">
+              <img className="w-20 h-20" src={item1} alt="" />
+              <span className="text-xs text-white">Fabric</span>
+            </button>
+          </div>
+          <div className="">
+            <button
+              className="btn px-8 py-3 border border-white items-center rounded"
+            >
+              <img className="w-20 h-20" src={item2} alt="" />
+              <span className="text-xs text-white">Sleeve</span>
+            </button>
+          </div>
+          <div className="">
+            <button className="btn px-8 py-3 border border-white items-center rounded">
+              <img className="w-20 h-20" src={item3} alt="" />
+              <span className="text-xs text-white">Color</span>
+            </button>
+          </div>
+          <div className="">
+            <button className="btn px-8 py-3 border border-white items-center rounded">
+              <img className="w-20 h-20" src={item4} alt="" />
+              <span className="text-xs text-white">Cuff</span>
+            </button>
+          </div>
+          <div className="">
+            <button className="btn px-8 py-3 border border-white items-center rounded">
+              <img className="w-20 h-20" src={item5} alt="" />
+              <span className="text-xs text-white">Placket</span>
+            </button>
+          </div>
+          <div className="">
+            <button className="btn px-8 py-3 border border-white items-center rounded">
+              <img className="w-20 h-20" src={item6} alt="" />
+              <span className="text-xs text-white">Pocket</span>
+            </button>
+          </div>
+          <div className="">
+            <button className="btn px-8 py-3 border border-white items-center rounded">
+              <img className="w-20 h-20" src={item1} alt="" />
+              <span className="text-xs text-white">Color</span>
+            </button>
+          </div>
+          <div className="">
+            <button className="btn px-8 py-3 border border-white items-center rounded">
+              <img className="w-20 h-20" src={item2} alt="" />
+              <span className="text-xs text-white">Fabric</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

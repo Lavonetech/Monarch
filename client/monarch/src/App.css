@@ -1,38 +1,441 @@
-.App {
-  text-align: center;
+.image1-container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 100px; 
+  left: 0;
+  top: 30px;
+  right: 400px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image2-container {
+  width: 100%;
+  height: 5px;
+  position: relative;
+  right: 400px;
+  top: 30px; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text1 {
+  position: relative;
+  left:980px;
+  top: 110px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text2{
+  position: relative;
+  left: 760px;
+  top: 240px;
+}
+
+.text3{
+  position: relative;
+  left: 620px;
+  top: 350px;
+}
+
+.container {
   display: flex;
+  top: auto;
+  left: 800px;
+  justify-content: space-between; /* Distribute space between elements */
+  max-width: 100%; /* Set maximum width */
+
+}
+
+.sidebar {
+  width: 200px; 
+  background-color: black; 
+  color: white; 
+  padding: 40px; 
+  height: 325vh;
+}
+
+.sidebar-content {
+  margin-bottom: 10px; 
+}
+
+.pn{
+  font-weight: bold; 
+  font-size: 18px;
+  white-space: nowrap;
+  background-color: white;
+  color: black;
+  padding: 0.1px 10px;
+  border-radius: 10px;
+}
+
+.fabric {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 30px; 
+  right: 2px;
   flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.fabric img {
+  margin-bottom: 10px; 
+}
+
+.fabric p {
+  margin-top: -10px; 
+}
+
+.sleeve {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 50px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.sleeve img {
+  margin-bottom: 10px; 
+}
+
+.sleeve p {
+  margin-top: -10px; 
+}
+
+.collar {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 70px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.collar img {
+  margin-bottom: 10px; 
+}
+
+.collar p {
+  margin-top: -10px; 
+}
+
+.cuff {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 90px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.cuff img {
+  margin-bottom: 10px; 
+}
+
+.cuff p {
+  margin-top: -10px; 
+}
+
+.placket {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 110px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.placket img {
+  margin-bottom: 10px; 
+}
+
+.placket p {
+  margin-top: -10px; 
+}
+
+.pocket {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 130px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.pocket img {
+  margin-bottom: 10px; 
+}
+
+.pocket p {
+  margin-top: -10px; 
+}
+
+.backdetails {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 150px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.backdetails img {
+  margin-bottom: 10px; 
+}
+
+.backdetails p {
+  margin-top: -10px; 
+}
+
+.backyoke {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 170px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.backyoke img {
+  margin-bottom: 10px; 
+}
+
+.backyoke p {
+  margin-top: -10px; 
+}
+
+.bottomcut {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 190px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.bottomcut img {
+  margin-bottom: 10px; 
+}
+
+.bottomcut p {
+  margin-top: -10px; 
+}
+
+.button {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 210px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.button img {
+  margin-bottom: 10px; 
+}
+
+.button p {
+  margin-top: -10px; 
+}
+
+.buttonthread {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 230px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.buttonthread img {
+  margin-bottom: 10px; 
+}
+
+.buttonthread p {
+  margin-top: -10px; 
+}
+
+.contrasts {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 250px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.contrasts img {
+  margin-bottom: 10px; 
+}
+
+.contrasts p {
+  margin-top: -10px; 
+}
+
+.embroidery {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 270px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 10px; 
+  border-radius: 10px;
+}
+
+.embroidery img {
+  margin-bottom: 20px; 
+}
+
+.embroidery p {
+  margin-top: 20px; 
+}
+
+.handkerchief {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 290px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+}
+
+.handkerchief img {
+  margin-bottom: 10px; 
+}
+
+.handkerchief p {
+  margin-top: -10px; 
+}
+
+.continue {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  top: 310px; 
+  right: 2px;
+  flex-direction: column;
+  border: 2px solid white; 
+  padding: 1px; 
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+.continue img {
+  margin-bottom: 1px; 
+}
+
+.continue p {
+  margin-top: -10px; 
+  color: black;
+  font-weight: 500;
+}
+
+.sleeve-options-container {
+  height: 120px;
+  position: absolute;
+  top: -30px; /* Adjust this value based on your layout */
+  left: 186px; /* Adjust this value based on your layout */
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 40px;
+  z-index: 100; /* Ensure it appears above other content */
+}
+
+.sleeve-options-container::before {
+  content: "Sleeves"; /* Text to display */
+  display: block;
+  background-color: black; /* Background color */
+  color: white; /* Text color */
+  font-weight: bold; /* Bold font */
+  padding: 8px; /* Padding */
+  border-radius: 5px 5px 0 0; /* Rounded corners */
+  position: absolute; /* Position relative to the container */
+  top: 0px; /* Adjust this value to move the theme up */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  text-align: left; /* Center align text */
+}
+
+.sleeve-option {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: -15px;
 }
 
-.App-link {
-  color: #61dafb;
+.sleeve-option img {
+  width: 50px; 
+  height: auto;
+  margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sleeve-option p {
+  margin: 10px;
+  color: black;
+  white-space: nowrap;
 }
+
+.divider {
+  width: 120%;
+  border-top: 2px solid black; 
+  margin-top: 10px; 
+  margin-bottom: 30px; 
+}
+
+.short-sleeve {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  margin-top: auto;
+  width: 100%;
+  height: auto;
+}
+
+.long-sleeve{
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  margin-top: auto;
+}
+
+

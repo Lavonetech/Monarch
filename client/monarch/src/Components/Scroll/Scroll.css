@@ -1,0 +1,57 @@
+.Scroll{
+    background-color: var(--back);
+    width: 12vw;
+    height: 100vh;
+    position: absolute;
+    border: 0;
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+
+}
+
+.Scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.product-name{
+   background-color: transparent;
+   color: var(--white-0);
+   width: 8vw;
+   border: 2px var(--white-0) solid;
+   border-radius: 10px;
+   font-family: "Outfit", sans-serif;
+   font-weight: 500;
+   font-size: 12px;
+     
+}
+
+.product-name p {
+    text-align: center;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+
+.img-1{
+    width: 100%;
+    margin-left:0px;
+}
+
+.embroidery img{
+    width: 100%;
+    margin-left: 0px;
+    padding: 16px;
+}
+
+.handkerchief img{
+    margin-left: 8px;
+
+}
+
+.handkerchief p{
+    margin-top: 5px;
+
+}

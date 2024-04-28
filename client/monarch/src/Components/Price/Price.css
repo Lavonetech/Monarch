@@ -1,0 +1,63 @@
+.price{
+    font-size: 60px;
+    font-family: "Outfit", sans-serif;
+    position: absolute;
+    margin-left: 70vw;
+    margin-top: 7vh;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 114px;
+    color: var(--back);
+    text-shadow: 6px -2px 4px rgba(255, 255, 255, 0.7);
+  }
+  
+.continue-2{
+     position: absolute;
+     margin-left: 67vw;
+     margin-top: 23vh;
+     background-color: var(--back);
+     color: var(--white-0);
+     width: 12vw;
+     border: 2px var(--back) solid;
+     border-radius: 2px;
+     font-family: "Outfit", sans-serif;
+     font-weight: 300;
+     font-size: 20px;
+     /* text-align: center; */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  
+.continue-2 p {
+    padding-top: 6px;
+  }
+  
+.reset{
+    position: absolute;
+    margin-left: 71vw;
+    margin-top: 35.5vh;
+    background-color: var(--white-0);
+    color: var(--back);
+    border: 2px var(--back) solid;
+    border-radius: 2px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    width: 8vw;
+    height: 6vh;
+  }
+  
+.reset p {
+   position: absolute;
+   padding-top:6px;
+   padding-left: 20px;
+   font-size: 12px;
+   /* word-wrap: break-word; */ 
+  }
+  
+.reset img{
+    position: absolute;
+    width: 18px;
+    margin-top: 5px;
+    margin-left: -2px;
+  }

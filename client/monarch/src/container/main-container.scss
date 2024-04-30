@@ -1,0 +1,33 @@
+#main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+
+  $side-bar-width: 180px;
+
+  .side-bar {
+    width: $side-bar-width;
+    background-color: #000000;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px;
+    overflow-y: auto;
+
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    /* Firefox */
+    scrollbar-width: thin; /* Can be "thin" or "auto" */
+    scrollbar-color: #ffffff #2c2c2c;
+  }
+
+  .outlet {
+    width: calc(100% - $side-bar-width);
+    background-color: #bbbbbb;
+    height: 100vh;
+  }
+}

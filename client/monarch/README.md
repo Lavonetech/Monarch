@@ -58,10 +58,3 @@ npm install
 ```bash
 npm start
 ```
-
-<<<<<<< HEAD
-.............
-
-
-=======
->>>>>>> d73f1ee41dec0b1cf9c440c089df5fff7f5dc0d0

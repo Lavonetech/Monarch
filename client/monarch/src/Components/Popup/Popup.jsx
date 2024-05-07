@@ -5,7 +5,7 @@ import long from '../../Img/long-sleeve.svg';
 import short from '../../Img/short-sleeve.svg';
 
 import './Popup.css'
-import { UserCharge, UserContext, UserPopup } from '../../App';
+import { UserPopup, UserContext } from '../../App';
 
 
 function Popup() {
@@ -15,20 +15,19 @@ function Popup() {
   const shortSleeveRef = useRef();
 
   const option = useContext(UserContext);
-  const option_change = useContext(UserCharge);
-  const open_pop = useContext(UserPopup);
-  
 
+  const [options, scrollClick] = useContext(UserPopup);
+ 
   const select = (e) => {
     if(e.target.alt == "long"){
         longSleeveRef.current.style.backgroundColor = 'var(--ligth-blue)';
         shortSleeveRef.current.style.backgroundColor = 'var(--white-0)';
-        option_change(0);  
+        options(0);  
       }
     else if(e.target.alt == "short"){
       shortSleeveRef.current.style.backgroundColor =  'var(--ligth-blue)';
       longSleeveRef.current.style.backgroundColor = 'var(--white-0)';
-      option_change(1);
+      options(1);
     }
   }
 
@@ -36,18 +35,17 @@ function Popup() {
     dispalyRef.current.style.visibility = 'hidden';
    }
  
-  if(open_pop){
-      dispalyRef.current.style.visibility = 'visible';
-  }
-
   useEffect( () => {
-
-  },[shortSleeveRef, longSleeveRef,dispalyRef]);
+    if(scrollClick){
+      dispalyRef.current.style.visibility = 'visible';
+    }else if(!scrollClick){
+      dispalyRef.current.style.visibility = 'hidden';
+    }
+  },[shortSleeveRef, longSleeveRef,dispalyRef, scrollClick]);
   
-
   return (
     <>
-     <div className="popup-box" ref={dispalyRef}>
+     <div className="popup-box" ref={dispalyRef}>   
         <div className="box-tittle container">
             <p class="">Sleeves</p>
             <Link to={"/"} relative="path" className="rest-1">Reset choice</Link>
@@ -56,25 +54,25 @@ function Popup() {
             </div>
         </div>
 
-          <div 
+        <div 
           className="long-sleeve container" 
           style={{backgroundColor:'var(--ligth-blue)'}}  
           onClick={(e) => select(e)} 
           ref={longSleeveRef}
-          >
+        >
             <img src={long} alt="long" className=""/>
             <p>Long Sleeve</p>
-          </div>
+        </div>
 
-          <div 
+        <div 
           className="long-sleeve container" 
           style={{backgroundColor:'var(--white-0)'}} 
           onClick={(e) => select(e)} 
           ref={shortSleeveRef}
-          >
+        >
             <img src={short} alt="short" className="img-2"/>
             <p>short Sleeve</p>
-          </div>      
+        </div>      
      </div>
     </>
   )

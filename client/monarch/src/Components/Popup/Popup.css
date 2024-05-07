@@ -2,11 +2,9 @@
     visibility: hidden;
     position: absolute;
     width: 20vw;
-    /* height: 46vh; */
     background-color: var(--white-0);
     margin-left: 2vw;
-    margin-top: 6vh;
-    
+    margin-top: 6vh; 
   }
   
   .box-tittle{
@@ -14,22 +12,16 @@
     color: var(--white-0);
     font-family: "Outfit", sans-serif;
     display: inline-flex;
-    /* position: absolute; */
     width: 20vw;
-    height: 8vh;
-     
+    height: 8vh;   
   }
   
   .box-tittle p{
     font-size: 20px;
     justify-content: flex-start;
-    /* padding-bottom: -20px; */
     padding-top: 2px;
     margin-left: 1vw;
     margin-top: 1vh;
-    /* position: absolute; */
-    
-  
   }
   .rest-1{
     justify-content: center;
@@ -40,10 +32,8 @@
     padding-top: 2px;
     position: absolute;
     font-weight: 300;
-  
   }
   .box-tittle i{
-    /* justify-content: flex-end; */
     font-size: 34px;
     margin-left: 16vw;
     margin-top: -0.5vh;
@@ -53,8 +43,6 @@
   
   .long-sleeve{
     height: 18vh;
-    /* position: absolute; */
-    /* margin-top: 8vh; */
     background-color: var(--white-0);
   }
   
@@ -65,7 +53,6 @@
   
   .long-sleeve p{
     position: absolute;
-    /* display: flex; */
     margin-top: 6vh;
     margin-left: 9vw;
     font-family: "Outfit", sans-serif;
@@ -74,6 +61,32 @@
   }
   
   .img-2{
-    width: 43%;
-    /* margin-left:0px; */
+    width: 44%;
+  }
+
+
+  @media screen and (max-width: 1200px){
+    .rest-1{
+      margin-left: 8vw;
+      margin-top: 1.5vh;
+    }
+
+    .box-tittle i{
+      margin-left: 16vw;
+      margin-top: 0vh;
+    }
+
+    .box-tittle{
+      width: 20vw;
+      height: 6vh;   
+    }
+
+    .long-sleeve{
+      height: 15vh;
+    }
+
+    .img-2{
+      width: 48%;
+    }
+
   }

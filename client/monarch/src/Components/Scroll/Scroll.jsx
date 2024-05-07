@@ -20,9 +20,10 @@ import img14 from '../../Img/handkerchief.svg';
 import '../../App';
 import './Scroll.css';
 
-import { UserContext, UserProductShow, UserShowPopup} from "../../App";
-import Product from '../Product/Product';
+import { UserContext, UserScroll} from "../../App";
 
+const PORT = 5173;
+const HOST = 'http://localhost';
 
 const products = [
    {
@@ -50,16 +51,7 @@ const products = [
 
 ];
 
-const product_imgs = products.filter(product_1 => product_1.id > 0 );
-
-const product = product_imgs.map( product_img =>
-   <>
-     <div key={product_img.id} >
-       <Product  src={product_img.img} text={product_img.text} value={product_img.text} />
-     </div>    
-   </>  
-    
-);
+// wirte products object >> MongoDB (v3.0)
 
 
 const style_1 = {
@@ -81,39 +73,46 @@ const style_3 = {
 }
 
 
-
 function Scroll() {
 
      const option = useContext(UserContext);   
-     const productShow = useContext(UserProductShow);
-     const scrollClicks = useContext(UserShowPopup);
-     
-     const [num , setNum] = useState(1);
+     const [productShows, scrollClicks] = useContext(UserScroll);
    
-     function click_popup(e){
-      
-         if(e.target.src == "http://localhost:5173/src/Img/long-sleeve.svg" | 
-         e.target.src == "http://localhost:5173/src/Img/short-sleeve.svg"){
-               productShow(true);
-            
-            
-               if(num == 1){
-                  scrollClicks(true);
-                  
-                  setNum(2);
+     const [num , setNum] = useState(1);
+ 
+     function click_popup(e){    
+         if(e.target.src == `${HOST}:${PORT}/src/Img/long-sleeve.svg` | 
+         e.target.src == `${HOST}:${PORT}/src/Img/short-sleeve.svg`){
+               productShows(true); 
+               if(num == 1){    
+                  scrollClicks(true);      
+                  setNum(2);                        
                }else if(num == 2){
                   scrollClicks(false);
                   setNum(1);
-
                }
          }
-
       }
 
       useEffect( () => {
-
+         
       },[num]);
 
+      const product_imgs = products.filter(product_1 => product_1.id > 0 );
+      const product = product_imgs.map( product_img =>
+        <>
+          <div key={product_img.id} >
+            <div class="product-name container mt-3">
+               <img 
+               src={product_img.id == 2 ? [option == 0 ? long_sleeve : short_sleeve] : product_img.img}
+               alt={product_img.text} className="img-1 mt-2"
+               productMaps = {product_img.id}
+               />
+               <p class="mb-1" >{product_img.text}</p>
+             </div>   
+          </div>    
+        </>     
+     );   
 
       return (
          <>
@@ -128,7 +127,7 @@ function Scroll() {
 
                <Link to={"/"} relative="path" className="text-decoration-none">
                      <div class="product-name container mt-3 mb-4" style={style_1}>
-                        <i class="bi bi-arrow-right m-3 " style={{fontSize:'48px'}}></i>
+                        <i class="bi bi-arrow-right m-3 "></i>
                         <p class="p-2" style={style_3}>Continue</p>
                      </div>
                </Link>          

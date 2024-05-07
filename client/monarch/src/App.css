@@ -1,7 +1,6 @@
 .App{
   height: 100vh;
   background-color: var(--white-1);
-  /* position: absolute; */
 }
 
 .body{
@@ -19,20 +18,10 @@
 }
 
 .main-img-1{
-  /* visibility: visible; */
   width: 400px;
   position: absolute;
   margin-left: 30vw;
-  
-}
-
-.main-img-2{
-  /* visibility: hidden; */
-  width: 325px;
-  position: absolute;
-  margin-left: 31.3vw;
-  margin-top: 1vh;
-  
+    
 }
 
 .effect-img-1{
@@ -45,6 +34,14 @@
   background: #ffffff;
   box-shadow: '500px 500px 500px';
   filter: blur(90px);
+}
+
+
+
+@media screen and (max-width: 1200px){
+
+
+
 }
 
 
